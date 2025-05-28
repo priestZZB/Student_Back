@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Microsoft YaHei', sans-serif;
+    background: #f0f2f5;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tab {
+    width: 380px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 2;
+    padding: 30px;
+}
+
+.tab_menu {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.tab_menu li {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s;
+    list-style: none;
+}
+
+.tab_menu li.selected {
+    color: #1890ff;
+    border-bottom: 2px solid #1890ff;
+    margin-bottom: -1px;
+}
+
+.tab_box {
+    position: relative;
+    min-height: 300px;
+}
+
+.tab_content {
+    display: none;
+}
+
+.tab_content.active {
+    display: block;
+}
+
+.login_form .form_group {
+    margin-bottom: 20px;
+}
+
+.login_form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.login_form input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.login_form input:focus {
+    border-color: #1890ff;
+    outline: none;
+}
+
+.login_form button {
+    width: 100%;
+    padding: 12px;
+    background: #1890ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.login_form button:hover {
+    background: #40a9ff;
+}
+
+.error_box {
+    color: #ff4d4f;
+    margin-bottom: 15px;
+    min-height: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slider_item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider_item.active {
+    opacity: 1;
+}
